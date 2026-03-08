@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AB Vision Studio</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<header>
+
+<h1 class="logo">AB VISION STUDIO</h1>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div class="slider">
+
+<div class="slides" id="slides">
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1492724441997-5dc865305da7');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');"></div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475');"></div>
+
+
+</div>
+
+<button class="prev" id="prev">&#10094;</button>
+<button class="next" id="next">&#10095;</button>
+
+</div>
+
+<div class="hero-content">
+
+<h2>Create Cinematic Stories</h2>
+
+<p>
+Professional Videography, Reels Creation, Event Coverage & Website Development for Business Growth
+</p>
+
+<a href="#portfolio" class="btn">View Portfolio</a>
+
+</div>
+
+</section>
+
+
+<section class="services" id="services">
+
+<h2>Our Services</h2>
+
+<div class="service-container">
+
+<div class="service-card">
+<h3>🎬 Videography</h3>
+<p>Professional cinematic video shooting for brands and events.</p>
+</div>
+
+<div class="service-card">
+<h3>✂ Video Editing</h3>
+<p>High quality editing with color grading and storytelling.</p>
+</div>
+
+<div class="service-card">
+<h3>📱 Instagram Reels</h3>
+<p>Trending reels creation to grow your Instagram reach.</p>
+</div>
+
+<div class="service-card">
+<h3>📸 Event Coverage</h3>
+<p>Wedding, birthday, home functions, corporate event full coverage.</p>
+</div>
+
+<div class="service-card">
+<h3>💻 Business Website</h3>
+<p>Professional websites to grow your business online.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="portfolio" id="portfolio">
+
+<h2>Recent Work</h2>
+
+<div class="video-grid">
+    <iframe 
+    src="https://drive.google.com/file/d/1WbVqS8L4dcMpnYXV5HlK8VTwlhek-t2f/preview"
+    width="100%" 
+    height="400"
+    allow="autoplay">
+    </iframe>
+
+
+    
+    <iframe 
+    src="https://drive.google.com/file/d/1pn1L64Xdv4Qs1kONs3w9XZ_N46_yxiSe/preview"
+    width="100%" 
+    height="400"
+    allow="autoplay">
+</iframe>
+
+<iframe 
+src="https://drive.google.com/file/d/1vqw879e7xNcBja5LuCwtDOQBK06w7gtC/preview"
+width="100%" 
+height="400"
+allow="autoplay">
+</iframe>
+
+<iframe 
+src="https://drive.google.com/file/d/1nTCynGeExdG5uwa8oS_7XKfRbYzYDdx2/preview"
+width="100%" 
+height="400"
+allow="autoplay">
+</iframe>
+
+<iframe 
+src="https://drive.google.com/file/d/1-GWsELBzN60xXTC8xGyt7UMtL6s0xqJY/preview"
+width="100%" 
+height="400"
+allow="autoplay">
+</iframe>
+
+<iframe 
+src="https://drive.google.com/file/d/1D4uyF0cFsPO4_JD_xA_1PdWrbajSrWFU/preview"
+width="100%" 
+height="400"
+allow="autoplay">
+</iframe>
+<!-- <iframe 
+src="https://drive.google.com/file/d/1-GWsELBzN60xXTC8xGyt7UMtL6s0xqJY/preview"
+    width="100%" 
+    height="400"
+    allow="autoplay">
+    </iframe> -->
+
+    <!-- <iframe src="https://www.youtube.com/embed/VIDEOID"></iframe> -->
+
+    <!-- <iframe src="https://www.youtube.com/embed/VIDEOID"></iframe> -->
+
+</div>
+
+</section>
+
+
+<section class="why">
+
+<h2>Why Choose Us</h2>
+
+<ul>
+
+<li>✔ Cinematic Quality</li>
+<li>✔ Creative Storytelling</li>
+<li>✔ Affordable Pricing</li>
+<li>✔ Fast Delivery</li>
+
+</ul>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+<h2>Book Your Shoot</h2>
+
+<p>Email : abilash.be00211@email.com</p>
+<p>Phone : +91 95002 97336</p>
+
+<a href="https://wa.me/919500297336" class="btn">WhatsApp</a>
+
+<a href="tel:+919500297336" class="btn">Call Now</a>
+
+</section>
+
+
+<footer>
+
+<p>© 2026 AB Vision Studio</p>
+
+</footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+let index = 0;
+
+const slides = document.getElementById("slides");
+const totalSlides = document.querySelectorAll(".slide").length;
+
+function showSlide(i){
+index = (i + totalSlides) % totalSlides;
+slides.style.transform = "translateX(-" + (index * 100) + "%)";
+}
+
+document.getElementById("next").onclick = function(){
+showSlide(index + 1);
+};
+
+document.getElementById("prev").onclick = function(){
+showSlide(index - 1);
+};
+
+setInterval(function(){
+showSlide(index + 1);
+},4000);
+
+});
+
+</script>
+
+</body>
+
+</html>
